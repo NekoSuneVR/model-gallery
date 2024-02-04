@@ -1,0 +1,36 @@
+name: "gpt4all-falcon"
+description: |
+    A commercially licensable model based on GPT-J and trained by Nomic AI on the v0 GPT4All dataset.
+license: "Apache 2.0"
+urls:
+- https://gpt4all.io
+config_file: |
+    backend: gpt4all
+    context_size: 1024
+    parameters:
+      model: gpt4all-falcon-newbpe-q4_0.gguf
+      top_k: 80
+      temperature: 0.2
+      top_p: 0.7
+    template:
+      completion: "gpt4all-completion"
+      chat: gpt4all-chat
+
+files:
+    - filename: "gpt4all-falcon-newbpe-q4_0.gguf"
+      sha256: "29f1f510535762a94009332f754dff77fc6014a0a0d2c93a34f0457f3cb66c73"
+      uri: "https://gpt4all.io/models/gguf/gpt4all-falcon-newbpe-q4_0.gguf"
+
+prompt_templates:
+- name: "gpt4all-completion"
+  content: |
+    Complete the prompt
+    ### Prompt:
+    {{.Input}}
+    ### Response:
+- name: "gpt4all-chat"
+  content: |
+    The prompt below is a question to answer, a task to complete, or a conversation to respond to; decide which and write an appropriate response.
+    ### Prompt:
+    {{.Input}}
+    ### Response:
