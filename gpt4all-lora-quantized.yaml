@@ -1,4 +1,4 @@
-name: "gpt4all-falcon"
+name: "gpt4all-lora-quantized"
 description: |
     A commercially licensable model based on GPT-J and trained by Nomic AI on the v0 GPT4All dataset.
 license: "Apache 2.0"
@@ -8,18 +8,17 @@ config_file: |
     backend: gpt4all
     context_size: 1024
     parameters:
-      model: gpt4all-falcon-newbpe-q4_0.gguf
+      model: gpt4all-lora-unfiltered-quantized.bin
       top_k: 80
-      temperature: 0.2
+      temperature: 0.5
       top_p: 0.7
     template:
       completion: "gpt4all-completion"
       chat: gpt4all-chat
 
 files:
-    - filename: "gpt4all-falcon-newbpe-q4_0.gguf"
-      sha256: "29f1f510535762a94009332f754dff77fc6014a0a0d2c93a34f0457f3cb66c73"
-      uri: "https://gpt4all.io/models/gguf/gpt4all-falcon-newbpe-q4_0.gguf"
+    - filename: "gpt4all-lora-unfiltered-quantized.bin"
+      uri: "https://the-eye.eu/public/AI/models/nomic-ai/gpt4all/gpt4all-lora-unfiltered-quantized.bin"
 
 prompt_templates:
 - name: "gpt4all-completion"
