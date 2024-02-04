@@ -18,7 +18,7 @@ config_file: |
 
 files:
     - filename: "gpt4all-falcon-newbpe-q4_0.gguf"
-      sha256: "29F1F510535762A94009332F754DFF77FC6014A0A0D2C93A34F0457F3CB66C73"
+      sha256: "29f1f510535762a94009332f754dff77fc6014a0a0d2c93a34f0457f3cb66c73"
       uri: "https://gpt4all.io/models/gguf/gpt4all-falcon-newbpe-q4_0.gguf"
 
 prompt_templates:
